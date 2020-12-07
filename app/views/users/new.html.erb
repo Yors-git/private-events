@@ -1,0 +1,13 @@
+<h1>Sign Up</h1>
+<%= form_for @user do |f| %>
+  <ul>
+  <% @user.errors.full_messages.each do |error| %>
+    <li style="color:red;"><%= error %></li>
+  <% end %>
+  </ul>
+  Username :
+  <%= f.text_field :username, placeholder: 'Enter username' %><br />
+  Email :
+  <%= f.email_field :email, placeholder: 'test@email.com' %><br /> 
+  <%= f.submit %>
+<% end %>
