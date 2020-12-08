@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   delete 'delete', to: 'sessions#destroy'
   get 'welcome', to: 'sessions#welcome'
   resources :events, only: [:index, :show, :new, :create]
-  resources :users, only: [:new, :create, :show]
-  root "users#show"
+  resources :users, only: [:index, :new, :create, :show]
+  root "users#index"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

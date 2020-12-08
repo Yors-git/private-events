@@ -12,7 +12,7 @@ class EventsController < ApplicationController
     @event = current_user.created_events.build(event_params)
     if @event.save
       flash.notice = "Event at #{@event[:place]} Created!"
-      redirect_to '/users/show'
+      redirect_to user_path(current_user.id)
     else
       render :new
     end

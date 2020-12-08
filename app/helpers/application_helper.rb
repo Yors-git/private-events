@@ -14,7 +14,7 @@ module ApplicationHelper
     sign_in = (link_to 'Login', '/login', method: :get, class: 'nav-link')
     if logged_in?
       content_tag(:li, content_tag(
-                         :a, 'Signed as: ' + current_user.username, href: '#', class: 'nav-link'
+                         :a, 'Signed as: ' + current_user.username, href: user_path(current_user.id), class: 'nav-link'
                        ),
                   class: 'nav-item') +
         content_tag(:li, new_event, class: 'nav-item active')+
