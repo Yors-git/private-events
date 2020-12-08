@@ -17,7 +17,7 @@ module ApplicationHelper
                          :a, 'Signed as: ' + current_user.username, href: user_path(current_user.id), class: 'nav-link'
                        ),
                   class: 'nav-item') +
-        content_tag(:li, new_event, class: 'nav-item active')+
+        content_tag(:li, new_event, class: 'nav-item active') +
         content_tag(:li, logout, class: 'nav-item')
     else
       content_tag(:li, sign_in, class: 'nav-item') +
