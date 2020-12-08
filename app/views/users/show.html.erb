@@ -1,7 +1,10 @@
 <h1>Users List</h1>
 <br>
 <% @users.each do |usr| %>
-<p><strong><%= usr.username %></strong>, <%= usr.email %></p>
+<p><strong><%= usr.username %>'s</strong> events:</p>
+  <p><% usr.created_events.each do |ev| %></p>
+  <p><%= ev.title %> <%= link_to 'show details', 'events#show' %></p>
+  <% end %>
 <br>
 <% end %>
 

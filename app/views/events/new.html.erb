@@ -1,0 +1,18 @@
+<h1>New Event</h1>
+<%= form_for @event do |f| %>
+  <ul>
+  <% @event.errors.full_messages.each do |error| %>
+    <li style="color:red;"><%= error %></li>
+  <% end %>
+  </ul>
+  Title:
+  <%= f.text_field :title, placeholder: 'Name it!' %><br /> 
+  Date of event:
+  <%= f.text_field :date_of_event, placeholder: 'When is happening?' %><br /> 
+  Place of event:
+  <%= f.text_field :place, placeholder: 'Where?' %><br /> 
+  Description of event:
+  <%= f.text_field :description, placeholder: 'What\'s about?' %><br />
+
+  <%= f.submit %>
+<% end %>
