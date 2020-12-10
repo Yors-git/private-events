@@ -1,7 +1,14 @@
 <h1><%= @event.title %></h1>
-<p>Hosted by: <strong><%= @event.creator.username %></strong></p>
+<p>Hosted by: <strong><%= @event.creator.username%></strong></p>
 <p><strong>When?</strong> <%= @event.date_of_event %></p>
 <p><strong>Where?</strong> <%= @event.place %></p>
 <p><strong>What's is about?</strong> <%= @event.description %></p>
+<h4>Atendees</h4>
+
+<ul><% @event.attendee_users do |ev| %>
+<li><strong><%= ev %></strong></li>
+<% end %>
+</ul>
 <br>
+
 <%= link_to 'Back', '/events' %>

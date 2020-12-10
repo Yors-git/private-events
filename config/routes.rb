@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'attendances/new'
+  get 'attendances/create'
+  get 'attendances/update'
+  get 'attendances/destroy'
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
   delete 'delete', to: 'sessions#destroy'
