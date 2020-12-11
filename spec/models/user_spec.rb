@@ -9,7 +9,7 @@ RSpec.describe 'Users', type: :model do
   it 'checks if creating user is correct' do
     expect(user).to be_valid
   end
-  
+
   it 'check correct association' do
     expect(created_events).to eq(:has_many)
   end
