@@ -22,6 +22,17 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
   end
 
+  def rsvp
+    @event = Event.find(params[:id])
+    if @event.attendee_users.include?(current_user)
+      flash.notice = "You already RSVP"
+      render :show
+    else
+      @event.attendee_users<< current_user
+      render :show
+    end
+  end
+
   private
 
   def event_params

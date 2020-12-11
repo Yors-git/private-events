@@ -1,14 +1,13 @@
-<h1><%= @event.title %></h1>
+<h1><%= @event.title %> <%= link_to 'Attend', rsvp_event_path, class: 'btn btn-success'%></h1>
 <p>Hosted by: <strong><%= @event.creator.username%></strong></p>
 <p><strong>When?</strong> <%= @event.date_of_event %></p>
 <p><strong>Where?</strong> <%= @event.place %></p>
-<p><strong>What's is about?</strong> <%= @event.description %></p>
-<h4>Atendees</h4>
-
-<ul><% @event.attendee_users do |ev| %>
-<li><strong><%= ev %></strong></li>
-<% end %>
-</ul>
+<p><strong>What's about?</strong> <%= @event.description %></p>
 <br>
-
-<%= link_to 'Back', '/events' %>
+<div><h3>Attendees:</h3>
+<% @event.attendee_users.each do |ev| %>
+<p><%= ev.username %></p>
+<% end %>
+</div>
+<br>
+<p>  <%= link_to 'Back', '/events' %></p>
