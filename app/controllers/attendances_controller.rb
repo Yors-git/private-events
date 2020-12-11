@@ -14,7 +14,7 @@ class AttendancesController < ApplicationController
     @event_attendance.event_id = params[:id]
     # @event_attendance = Attendance.new(user_id: current_user.id, event_id: params[:event_id])
     if @event_attendance.save
-      flash.notice = "You are in!"
+      flash.notice = 'You are in!'
       redirect_to user_path(current_user.id)
     else
       redirect_to '/events'
@@ -25,11 +25,9 @@ class AttendancesController < ApplicationController
     @events_attendance = Attendance.find(event_attendance_params)
   end
 
-  def update
-  end
+  def update; end
 
-  def destroy
-  end
+  def destroy; end
 
   private
 
