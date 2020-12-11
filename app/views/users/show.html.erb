@@ -1,11 +1,42 @@
-<h1>Users List</h1>
+<h2><strong><%= @user.username %>'s</strong> created events:</h2>
+  <div>
+    <ul><h4>Upcomming</h4>
+      <% @user.created_events.each do |ev| %>
+        <% if ev.date_of_event >= Date.today.to_s %>
+        <li><%= ev.title %> <%= link_to 'show details', event_path(ev.id) %></li>
+        <% end %>
+      <% end %>
+    </ul>
+
+    <ul><h4>Past</h4>
+      <% @user.created_events.each do |ev| %>
+        <% if ev.date_of_event < Date.today.to_s %>
+        <li><%= ev.title %> <%= link_to 'show details', event_path(ev.id) %></li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+<br>
+<h2><strong><%= @user.username %>'s</strong> RSVP'd events:</h2>
+  <div>
+    <ul><h4>Upcomming</h4>
+      <% @user.attended_events.each do |ev| %>
+        <% if ev.date_of_event >= Date.today.to_s %>
+        <li><%= ev.title %> <%= link_to 'show details', event_path(ev.id) %></li>
+        <% end %>
+      <% end %>
+    </ul>
+
+    <ul><h4>Past</h4>
+      <% @user.attended_events.each do |ev| %>
+        <% if ev.date_of_event < Date.today.to_s %>
+        <li><%= ev.title %> <%= link_to 'show details', event_path(ev.id) %></li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
 <br>
 
-<p><strong><%= @user.username %>'s</strong> events:</p>
-  <p><% @user.created_events.each do |ev| %></p>
-  <p>- <%= ev.title %> <%= link_to 'show details', event_path(ev.id) %></p>
-  <% end %>
-<br>
 <%= link_to 'Back', '/users' %>
 
 

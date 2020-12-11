@@ -4,10 +4,10 @@
 <p><strong>Where?</strong> <%= @event.place %></p>
 <p><strong>What's about?</strong> <%= @event.description %></p>
 <br>
-<div><h3>Attendees:</h3>
-<% @event.attendee_users.each do |ev| %>
-<p><%= ev.username %></p>
+<h3>Attendees:</h3>
+<ul><% @event.attendee_users.each do |ev| %>
+<li><%= ev.username %></li>
 <% end %>
-</div>
+</ul>
 <br>
 <p>  <%= link_to 'Back', '/events' %></p>
