@@ -1,6 +1,6 @@
 # Private Events
 
-This Private events app allows the to signup or login. The users create events, set a title, set a date and a little description for each event. Other usesrs can attend events, one user can attend many events and an event can be attended by many users.
+This Private events app allows the to signup or login. The users create events, set a title, set a date and a little description for each event. Other users can attend events, one user can attend many events and an event can be attended by many users.
 ## Screenshot
 
 ![img](./app/assets/images/ScreenShot.png)
