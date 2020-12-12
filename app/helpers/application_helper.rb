@@ -11,7 +11,7 @@ module ApplicationHelper
     new_event = (link_to 'New Event', '/events/new', method: :get, class: 'nav-link')
     logout = (link_to 'Logout', '/delete', method: :delete, class: 'nav-link')
     sign_up = (link_to 'Sign Up', '/users/new', method: :get, class: 'nav-link')
-    sign_in = (link_to 'Login', '/login', method: :get, class: 'nav-link')
+    sign_in = (link_to 'Log in', '/login', method: :get, class: 'nav-link')
     if logged_in?
       content_tag(:li, content_tag(
                          :a, 'Signed as: ' + current_user.username, href: user_path(current_user.id), class: 'nav-link'
