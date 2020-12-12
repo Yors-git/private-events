@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.describe 'Private-Events', type: :system do
   describe 'signUp' do
-
     scenario 'signup a new user' do
       visit 'users/new'
       fill_in :user_username, with: 'Capybara'
