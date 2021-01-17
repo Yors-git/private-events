@@ -5,6 +5,10 @@ This Private events app allows the to signup or login. The users create events, 
 
 ![img](./app/assets/images/ScreenShot.png)
 
+## Live Demo
+
+[Live Demo Link](https://sleepy-river-71785.herokuapp.com/)
+
 ## Built With 🛠
 
 - Ruby: 2.6.3
