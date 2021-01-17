@@ -1,0 +1,14 @@
+<h1>All of our events:</h1><br>
+  <div>
+    <ul><h4>Upcomming</h4><br>
+      <% @future_events.each do |ev| %>
+        <li><%= ev.title %> <%= link_to 'show details', event_path(ev.id) %></li>
+      <% end %>
+    </ul>
+    <br>
+    <ul><h4>Past</h4>
+      <% @past_events.each do |ev| %>
+        <li><%= ev.title %> <%= link_to 'show details', event_path(ev.id) %></li>
+      <% end %>
+    </ul>
+  </div>
